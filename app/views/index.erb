@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="signup">
+  <%if session[:username]%>
+    <p>Hello <%= session[:username]%>!</p><a href ='/logout'><button type="button" class="btn btn-primary">Logout</button></a><hr>
+
+
+
+
+    <hr><p><b>Tweet Now!</b></p><br>
+    <form id='tweetform' action='/tweet' method='post'>
+      <input id="tweet_text" type='text' name='tweet' placeholder='Tweet  Here'>
+      <input type='submit' value='Submit' class='button'>
+    </form>
+  <%else%>
+    <a href ='/login'><button type="button" class="btn btn-primary">Sign In with Twitter</button></a>
+  <%end%>
+</div>
+
+</div>
